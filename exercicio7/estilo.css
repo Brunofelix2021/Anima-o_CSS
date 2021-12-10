@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*ESTILO DA INDEX*/
+
+body{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:20px;
+	color:#424141;
+	background-image:url(ferro.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size:cover;
+	margin-top:60px;
+}
+main{
+	width:1200px;
+	overflow:hidden;
+	margin:0 auto;
+	background-color:rgba(255,255,255,0.70);
+}
+header{
+	width:1200px;
+	height:100px;
+	background-color:rgba(255,255,255,0.70);
+	margin:20px auto;
+}
+header>h1{
+	font-size:70px;
+	text-align:center;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	margin:0;
+}
+/*ESTILO DO MENU PRINCIPAL*/
+.principal{
+	width:100%;
+	height:50px;
+	background-color:#9B3031;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1000;
+}
+.principal>ul{/*retirar marcadores da lista*/
+	list-style-type:none;
+	width:1200px;
+	margin:0 auto;
+}
+.principal>ul>li{/*colocar os itens na horizontal*/
+	display:inline-block;
+}
+.linque:link{/*fonte, tamanho, decoração do texto, ...*/
+	color:#fff;
+	text-align: center;
+	text-decoration:none;
+	font-size:30px;
+	font-weight:bolder;
+	padding:0px 30px;
+	line-height:50px;
+	text-transform:uppercase;
+}
+.linque:visited{
+	color:#fff;
+}
+.linque:hover{
+	color:#F14144;
+}
+
+/*ESTILO DO SUBTÍTULO DAS PÁGINAS*/
+.subtitulo{
+	text-align:center;
+	border-bottom:#065DAD 6px solid;
+	border-top:#065DAD 6px solid;
+	padding:20px 0;
+}
+
+/*ESTILO DO MENU DO IFRAME*/
+.menu-imagens{
+	text-align:center;
+}
+
+/*ESTILO DO IFRAME (página inicial)*/
+#conteudo{
+	width:1200px;
+	height:1200px;
+	overflow:hidden;/*para não aparecer barras de rolagem*/
+	border:none;
+}
+/*o estilo das páginas internas está interno a elas (em cada arquivo html)*/
+
+/*ESTILO DA PÁGINA CONT x BG*/
+.tipos-de-imagem{/*articles com as explicações s/ as imagens*/
+	width:1000px;
+	overflow:hidden;
+	margin:30px auto;
+	border:#AC1214 solid 2px;
+	border-radius:8px;
+}
+.texto-secao{
+	font-size:24px;
+	color:#151212;
+	padding-left:30px;
+}
+.imagem-conteudo{
+	width:100%;
+}
+.imagem-bg{
+	width:100%;
+	height:670px;
+	background-image:url(A-Website-Designed-Infographic-Portuguese.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+/*ESTILO DA PÁGINA DE ANIMAÇÕES*/
+.caixa-de-fora { /*BOX DOS BLOCOS DE ANIMAÇÃO*/
+	width: 500px;     
+	height: 500px;
+	margin: 25px;
+	padding: 20px;
+	float: left;
+	border: 2px solid #F41C1F;
+	border-radius: 10px;
+	box-shadow: 10px 10px 6px -6px #777777;
+}/*BLOCO 1*/
+#caixa1 {
+	width: 300px;
+	height: 300px;
+	background-color: #EC1D20;
+	border: 20px solid #0217FF;
+	margin: 50px;
+	transition: all 2s ease 0.2s;
+}
+#caixa1:hover {
+	border-color: #29E314;
+	width: 200px;
+	height: 200px;
+	background-color: #F0AE87;
+}   /*BLOCO 2*/
+.imagem1 {
+	border-radius: 50%;
+	margin: 20px;
+	float: right;
+	opacity: 0.5;
+	transition: all 1s ease-in-out;
+	transform: rotate(0deg);
+	shape-outside: circle();
+}
+.imagem1:hover {
+	opacity: 1;
+	transform: rotate(720deg);
+}
+
+/*BLOCO 3*/
+
+.texto{
+	font-size:50px;
+	margin:0;
+	border:3px solid #fc0004;
+	color:#fc0004;
+	transition:font-size 1s ease;
+	text-align:center;
+	}
+	.texto:hover{
+		font-size:70px;
+		}
+/*BLOCO 4*/
+
+.transforma2d{  /*div criada para fazer o efeito com imagem se movimentando dentro */
+	width:300px;
+	height:300px;
+	margin:75px;
+	color:#FFFFFF;
+	font-size:80px;
+	font-weight:bolder;
+	background-color:#19A7F7;
+	transition:all 2s;  /*PROPRIEDADE DE TRANSIÇÃO*/
+	
+	}
+	.transforma2d:hover{  /*PROPRIEDADES DE TRANSIÇÃO PARA A CAIXA */
+		transform:scale(.5) rotate(30deg) translateX(50px) translateY(20px) skewX(20deg) skewY(30deg); 
+		}
+/*BLOCO 5*/
+
+
+.transforma2d2{
+	width:100px;
+	height:100px;
+	color:#FFFFFF;
+	font-size:80px;
+	background-color:#0e35eb;
+	float:left; 
+	margin:10px;
+	}
+
+
+.animacao:hover .transforma2d2 {
+	animation:animaCaixa ease 4s;         /*CRIADA A ANIMAMÇÃO CHAMADA ANIMACAIXA*/
+	animation-iteration-count:infinite;
+	transform-origin:50% 50%;}
+	
+	
+	
+	@keyframes animaCaixa{
+		
+		0%{
+			transform:translate(0,0);}
+			25%{
+				transform:translate(400px,0);}
+				50%{
+					transform:translate(400px,400px);}
+					75%{
+						transform:translate(0,400px);}
+						100%{
+							transform:translate(0,0);}
+		}
+		
+	
+
+
+/*ESTILO DO RODAPÉ E DO MENU DO RODAPÉ*/
+footer{
+	width:100%;
+	height:150px;
+}
+.secundario{
+	width:100%;
+	height:50px;
+	background-color:rgba(0,0,0,0.80);
+}
+.secundario>p{
+	text-align:center;
+}
+.secundario a:link{
+	text-transform:lowercase;
+	font-weight:lighter;
+}
+footer>h4{
+	margin:0;
+	line-height:85px;
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	background-color:rgba(0,0,0,0.50);
+}
+
